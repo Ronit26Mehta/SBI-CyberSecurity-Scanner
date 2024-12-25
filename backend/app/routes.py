@@ -13,5 +13,8 @@ def static_analysis():
 @main_routes.route('/dynamic-analysis', methods=['POST'])
 def dynamic_analysis():
     url = request.json.get('url')
+    if not url:
+        return jsonify({'error': 'URL is required'}), 400 
+    
     results = perform_dynamic_analysis(url)
     return jsonify({"results": results})
