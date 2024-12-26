@@ -1,12 +1,12 @@
-import React from 'react';
-import Dashboard from './components/Dashboard';
+import React from "react";
+import ScanForm from "./components/ScanForm";
 
-function App() {
-    return (
-        <div>
-            <Dashboard />
-        </div>
-    );
-}
+const App = () => {
+  return (
+    <div>
+      <ScanForm />
+    </div>
+  );
+};
 
 export default App;
