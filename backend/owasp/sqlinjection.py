@@ -6,17 +6,14 @@ from urllib.parse import urljoin
 s = requests.Session()
 s.headers["User-Agent"] = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36"
 
-
 def get_forms(url):
     soup = BeautifulSoup(s.get(url).content, "html.parser")
     return soup.find_all("form")
-
 
 def form_details(form):
     detailsOfForm = {}
     action = form.attrs.get("action", "").lower()  
     method = form.attrs.get("method", "get").lower()  
-    
     inputs = []
     
     for input_tag in form.find_all("input"):
@@ -40,7 +37,6 @@ def vulnerable(response):
         if error in response.content.decode().lower():
             return True
     return False
-
 
 def sql_injection_scan(url):
     forms = get_forms(url)
