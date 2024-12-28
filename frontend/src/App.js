@@ -1,12 +1,14 @@
 import React from "react";
-import ScanForm from "./components/ScanForm";
+import OWASPScan from "./components/OWASPScan";  
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <ScanForm />
+    <div className="min-h-screen flex justify-center items-center bg-gray-200">
+      <div className="w-full max-w-3xl p-8">
+        <OWASPScan /> 
+      </div>
     </div>
   );
-};
+}
 
 export default App;
