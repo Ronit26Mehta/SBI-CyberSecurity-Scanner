@@ -1,12 +1,11 @@
 import React from "react";
-import OWASPScan from "./components/OWASPScan";  
+import OWASPScan from "./components/OWASPScan";
+import './index.css'; 
 
 function App() {
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gray-200">
-      <div className="w-full max-w-3xl p-8">
-        <OWASPScan /> 
-      </div>
+    <div className="bg-gradient-to-br from-blue-600 via-teal-400 to-green-500 min-h-screen flex justify-center items-center">
+      <OWASPScan />
     </div>
   );
 }
