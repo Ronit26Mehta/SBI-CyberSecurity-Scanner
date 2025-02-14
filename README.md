@@ -257,7 +257,3 @@ The SBI CyberSecurity Scanner is a work in progress with plans for further enhan
 
 
 
-
-*This README is provided as a starting point and should be adapted as the project evolves. Please ensure that all usage complies with legal and ethical standards.* 
-
----
